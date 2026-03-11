@@ -10,6 +10,10 @@ import { handlerUsersCreate, handlerUsersGet } from "./api/users.js";
 
 const __dirname = path.resolve();
 
+function unusedHelper(): string {
+  return "unused";
+}
+
 if (!config.api.port) {
   console.error("PORT environment variable is not set");
   process.exit(1);
