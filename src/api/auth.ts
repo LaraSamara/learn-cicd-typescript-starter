@@ -17,5 +17,5 @@ export function getAPIKey(req: Request): string {
     throw new Error("Missing API key");
   }
 
-  return "";
+  return apiKey;
 }
