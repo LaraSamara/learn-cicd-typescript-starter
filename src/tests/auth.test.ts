@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { getAPIKey } from "../api/auth";
+import { getAPIKey } from "../api/auth.js";
 import type { Request } from "express";
 
 describe("getAPIKey", () => {
@@ -32,7 +32,7 @@ describe("getAPIKey", () => {
   test("throws if Authorization header is missing", () => {
     const req = {
       get: () => undefined,
-    } as Request;
+    } as unknown as Request;
 
     expect(() => getAPIKey(req)).toThrow();
   });
